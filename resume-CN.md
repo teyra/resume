@@ -1,11 +1,11 @@
-# Web3 web3前端工程师
+# Web3 前端工程师
 
 ## 个人信息
 
 - **姓名**: toby yan
 - **联系方式**: tobyyan865@gmail.com
 - **GitHub**: https://github.com/teyra
-- **工作经验**: 7年
+- **工作经验**: 7 年
 
 ## 专业技能
 
@@ -14,12 +14,11 @@
 - 精通 Ethereum 生态及相关工具 (web3.js, ethers.js, Hardhat)
 - 熟悉主流智能合约交互模式 (ERC-20, ERC-721, ERC-1155)
 - 掌握 solidity smart contract
-- 有 DeFi,GameFi, NFT, DAO 等 DApp 开发经验
+- 有 DeFi,GameFi, NFT 等 DApp 开发经验
 - 熟悉 WalletConnect, MetaMask 等钱包集成
 - 了解 IPFS, The Graph 等去中心化存储/索引方案
 - 了解 Uniswap V2/V3 的合约交互流程，能实现基础代币兑换功能
 - 使用 Uniswap SDK 或官方 API 获取代币价格和流动性数据
-- 通过 Tenderly 模拟简单交易，排查常见错误（如 Gas 不足、滑点过低）
 - 使用 Etherscan 验证合约并分析交易失败原因
 
 ### 前端技术
@@ -27,58 +26,65 @@
 - 精通 React.js/Next.js,Vue.js,vite 框架及生态;
 - 熟悉 TypeScript 和现代 JavaScript (ES6+)
 - 熟练使用 TailwindCSS, Styled-components 等 CSS 方案
-- 有 Web3React, Wagmi, useDapp 等 Web3 前端库使用经验
+- 有 Wagmi RainbowKit 前端库使用经验
+- 有音视频开发经验，精通 WebRTC、WebCodecs 和 SRS 流媒体服务器，具备音视频编解码和性能优化能力
 - 全栈开发能力，熟练掌握 Node.js、Nest.js 和 MongoDB
-- 了解 Web3UI 库 (Web3Modal, Web3UIKit)
-
-### 工程化
-### 工程化
-
-- Next.js 应用优化，SSR 首屏性能达 90+ Lighthouse 评分
-- 使用 Zustand+React Query 实现复杂状态管理，减少 45%重渲染
-- 设计可复用的 Web3 UI 组件库，开发效率提升 30%
-- CI/CD 自动化部署，实现 Vercel+Hardhat 的智能合约验证流水线
-- 熟悉敏捷开发流程
-
-## 工作经历
-
-### [公司名称] - Web3 前端工程师
-
-**[时间段]**
-
-- 负责 [项目名称] DApp 的前端架构设计和实现
-- 使用 [技术栈] 实现了 [具体功能]
-- 优化了 DApp 性能，将交易确认时间缩短了 X%
-- 实现了钱包多链支持 (Ethereum, Polygon, BSC 等)
-- 与智能合约工程师协作完成 [具体集成]
-
-### [公司名称] - 前端开发工程师
-
-**[时间段]**
-
-- 参与开发了 [项目名称] Web3 应用
-- 实现了响应式 UI 适配多种设备
-- 集成 The Graph 实现高效链上数据查询
-- 使用 [技术] 解决了 [具体问题]
 
 ## 项目经验
 
-### [项目名称] - [角色]
+### Parallel World Game 全栈开发
 
-**[时间段]** [项目链接]
+**2025.03 - 2025.04**  
+[项目链接](https://github.com/teyra)
 
-- 项目描述: [简要说明]
-- 技术栈: [使用的技术]
-- 实现功能:
-  - 功能 1
-  - 功能 2
-  - 功能 3
-- 成果: [量化成果或用户反馈]
+#### 项目描述
 
-### [项目名称] - [角色]
+Parallel World Game 是一个基于 Web3 技术的去中心化应用（DApp），集成了钱包连接、用户鉴权、智能合约交互以及游戏化功能（如抽卡游戏）。项目通过 Chainlink Functions 实现了链上与链下数据的交互，支持通过 ERC-721 合约铸造 NFT 奖励用户。后端服务基于 Nest.js 构建，提供了 JWT 鉴权和抽卡得分记录的 API 服务。
 
-**[时间段]** [项目链接]  
-...
+### 项目截图
+
+#### 抽卡游戏界面
+
+![抽卡游戏界面](https://mammoth-plum-sheep.myfilebase.com/ipfs/QmUV6kEaMj2Y9WjTPfyrzAKfut9rnjNrrftvj66PR3K6dP)
+
+#### 技术栈
+
+- **前端**: React.js、Next.js、TypeScript、TailwindCSS、Wagmi、RainbowKit、Axios
+- **后端**: Nest.js、JWT、Passport.js、Swagger、TypeScript、MongoDB
+- **智能合约**: Solidity、ERC-721、Chainlink Functions、Hardhat
+- **工具链**: Ethers.js、dotenv、bcrypt
+
+#### 实现功能
+
+##### 前端
+
+- 实现钱包连接功能，支持 MetaMask 等主流钱包，使用 wagmi 和 RainbowKit 提供钱包签名和断开连接功能。
+- 开发抽卡游戏模块，支持用户通过钱包登录后参与抽卡，随机生成卡片并计算点数。
+- 使用 axios 封装 HTTP 请求模块，支持 GET、POST、PUT、DELETE 等常用方法，并集成请求和响应拦截器。
+- 提供用户友好的提示信息，如钱包未连接、签名失败、抽卡次数用尽等。
+- 使用 readContract 方法从合约中读取链上数据（如用户得分和 NFT 铸造状态）。
+- 使用 writeContract 方法调用合约的 mintNFT 方法，根据用户得分铸造 NFT。
+
+##### 后端
+
+- 使用 `@nestjs/jwt` 实现基于钱包签名的用户登录功能，生成短期有效的 JWT Token。
+- 通过 `passport-jwt` 实现 JWT 鉴权，保护受限接口，确保只有经过身份验证的用户才能访问。
+- 设计并实现抽卡得分记录模块，支持用户提交得分并查询历史记录。
+- 使用 MongoDB 持久化存储用户数据和得分记录。
+- 集成 `@nestjs/swagger`，自动生成接口文档，支持在线调试和快速开发。
+
+##### 智能合约
+
+- 编写自定义 ERC-721 合约，支持 NFT 的铸造和分发。
+- 使用 Chainlink Functions 实现链上与链下数据的交互，实时查询用户得分数据。
+- 提供 `mintNFT` 方法，根据用户得分情况动态铸造 NFT 并颁发给用户。
+
+#### 成果
+
+- 成功上线了一个功能完善的 Web3 DApp，支持钱包连接、智能合约交互和游戏化功能。
+- 提供了完整的后端服务，支持用户登录鉴权和抽卡得分记录功能。
+- 合约端实现了链上与链下数据交互，并通过 ERC-721 标准铸造 NFT 奖励用户。
+- 项目架构清晰，易于扩展，为后续功能开发奠定了良好的基础。
 
 ## 教育背景
 
@@ -94,10 +100,8 @@
 ## 开源贡献
 
 - typegoose：优化 Schema 验证逻辑（PR #827）
-- web3-react：修复 Coin98 钱包兼容性问题
-- 自研工具：hardhat-verification-helper（获 120+ GitHub stars）
 
 ## 其他信息
 
-- 社区认证：Chainlink Builders Program 2024
+- 社区认证：Chainlink Builders Program 2025
 - 语言能力：英文技术文档读写（TOEFL 105），可参与英文技术会议
