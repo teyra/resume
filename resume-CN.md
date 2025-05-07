@@ -32,20 +32,13 @@
 
 ## 项目经验
 
-### Parallel World Game 全栈开发
+### Parallel World Game
 
-**2025.03 - 2025.04**  
-[项目链接](https://github.com/teyra)
+[项目链接](https://github.com/teyra/parallel-world-game)
 
 #### 项目描述
 
 Parallel World Game 是一个基于 Web3 技术的去中心化应用（DApp），集成了钱包连接、用户鉴权、智能合约交互以及游戏化功能（如抽卡游戏）。项目通过 Chainlink Functions 实现了链上与链下数据的交互，支持通过 ERC-721 合约铸造 NFT 奖励用户。后端服务基于 Nest.js 构建，提供了 JWT 鉴权和抽卡得分记录的 API 服务。
-
-### 项目截图
-
-#### 抽卡游戏界面
-
-![抽卡游戏界面](https://mammoth-plum-sheep.myfilebase.com/ipfs/QmUV6kEaMj2Y9WjTPfyrzAKfut9rnjNrrftvj66PR3K6dP)
 
 #### 技术栈
 
@@ -85,6 +78,84 @@ Parallel World Game 是一个基于 Web3 技术的去中心化应用（DApp）�
 - 提供了完整的后端服务，支持用户登录鉴权和抽卡得分记录功能。
 - 合约端实现了链上与链下数据交互，并通过 ERC-721 标准铸造 NFT 奖励用户。
 - 项目架构清晰，易于扩展，为后续功能开发奠定了良好的基础。
+
+### Dragon Yield - 去中心化收益聚合平台
+
+[项目链接](https://github.com/teyra/dragon-yield)
+
+#### 项目描述
+
+Dragon Yield 是一个基于 Web3 技术的去中心化收益聚合平台，旨在为用户提供高效、安全的质押、兑换和收益管理功能。项目集成了 Uniswap 和 Chainlink 等主流 DeFi 协议，支持多种代币的质押与兑换，并通过实时数据更新和用户友好的界面提升用户体验。
+
+#### 项目职责
+
+##### 核心功能开发
+
+- 实现代币质押与解押功能，支持多种代币的质押
+- 集成 Chainlink Data Feeds，实时获取代币价格并计算兑换比例
+- 使用 Uniswap Router 实现代币兑换功能，支持用户在不同代币之间快速切换
+
+##### 前端开发
+
+- 使用 Next.js 和 React 构建高性能的前端界面
+- 集成 RainbowKit 和 wagmi，实现钱包连接和用户身份管理
+- 使用 TailwindCSS 优化界面设计，提升用户体验
+
+##### 智能合约交互
+
+- 使用 @wagmi/core 和 viem 与智能合约交互，完成质押、解押和奖励领取功能
+- 集成 Uniswap SDK，调用 Router 合约完成代币兑换
+- 实现质押池的总锁仓量（TVL）和用户收益的实时展示
+
+##### 数据管理
+
+- 使用 @tanstack/react-query 管理异步数据请求，优化数据加载性能
+- 集成 urql，通过 GraphQL 查询 Uniswap 的交易对和流动性数据
+
+##### 优化与调试
+
+- 使用 eslint 和 typescript 提高代码质量，确保项目的可维护性
+- 通过 RainbowKit 提供多钱包支持，兼容 MetaMask、WalletConnect 等主流钱包
+
+## 技术栈
+
+| 类别         | 技术工具                              |
+| ------------ | ------------------------------------- |
+| 前端框架     | Next.js、React                        |
+| 样式工具     | TailwindCSS                           |
+| Web3 工具    | RainbowKit、wagmi、@uniswap/sdk、viem |
+| 数据管理     | @tanstack/react-query、urql           |
+| 智能合约交互 | Chainlink Data Feeds、Uniswap Router  |
+| 开发工具     | TypeScript、ESLint                    |
+
+#### 项目亮点
+
+##### 实时价格更新
+
+- 集成 Chainlink Data Feeds，实时获取 ETH/USD 和其他代币价格
+- 确保兑换比例的准确性
+
+##### 多功能质押系统
+
+- 支持用户质押多种代币
+- 实时显示质押余额、累计收益和总锁仓量（TVL）
+- 提供奖励代币分发功能，用户可随时领取收益
+
+##### 去中心化代币兑换
+
+- 使用 Uniswap Router 实现代币兑换
+- 支持多种代币对的快速切换
+- 动态计算兑换比例，确保用户获得最佳兑换价格
+
+##### 用户友好界面
+
+- 使用 RainbowKit 提供多钱包支持
+- 界面设计简洁直观，支持实时数据更新和交互
+
+##### 高扩展性
+
+- 使用 GraphQL 查询 Uniswap 数据，支持未来扩展更多 DeFi 协议
+- 模块化设计，便于后续功能迭代和维护
 
 ## 教育背景
 
